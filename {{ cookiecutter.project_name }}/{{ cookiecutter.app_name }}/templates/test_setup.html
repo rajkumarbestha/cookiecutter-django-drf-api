@@ -1,0 +1,25 @@
+<html>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+    </style>
+    <body style="font-family: 'Montserrat', sans-serif;">
+        <br>
+        <br>
+        <h1 style="color: #4485b8; text-align: center;">Welcome! Your setup is working!</h1>
+        <p></p>
+        <div  style="text-align: center;">
+        <h3 >If you are seeing this page,</h3>
+        <ol style="display: inline-block; margin:0 auto; width:45%">
+        <li style="text-align: left;">Your project <b>{{ cookiecutter.project_name }}</b> was setup with <b>Django-3.1</b> and is running as expected.</li>
+        <li style="text-align: left;"><b>Django-rest-framework(drf)</b> is installed and setup for you.</li>
+        <li style="text-align: left;">Your Applications structure is as per <b>standards</b>.</li>
+        <li style="text-align: left;"><b>CORS</b> is setup for your application to allow localhost, check settings.py to add more origins.</li>
+        <li style="text-align: left;">Your Applications environment file(.env) is in root folder. Use this file for local and cloud deployments.</li>
+        <li style="text-align: left;">You can use <b>azure-pipelines.yml</b> to build your application through <b>ADO</b>.</li>
+        <li style="text-align: left;"><b>MakeFile</b> contains all the build and deployment steps for your application.</li>
+        <li style="text-align: left;">Your application is ready to be deployed into AWS Lambda through <b>Zappa</b>, check zappa-settings.json.</li>
+        </ol>
+        <h3 style="text-align: center;">Now, you can simply concentrate on writing your APIs straightaway.</h3>
+        </div>
+    </body>
+</html>
