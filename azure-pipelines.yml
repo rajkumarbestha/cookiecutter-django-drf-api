@@ -1,0 +1,44 @@
+
+variables:
+  MajorVersion: 0
+  MinorVersion: 0
+  PatchVersion: 0
+
+trigger:
+- master
+- releases/*
+
+pr:
+- master
+- releases/*
+
+name: $(MajorVersion).$(MinorVersion).$(PatchVersion).$(Rev:r)
+
+jobs:
+- job: Build_Backend
+  pool:
+    vmImage: ubuntu-16.04
+  steps:
+  - task: UsePythonVersion@0
+    inputs:
+      versionSpec: '3.7'
+
+  - task: CopyFiles@2
+    inputs:
+      sourceFolder: '$(Build.SourcesDirectory)'
+      contents: '**' 
+      targetFolder: '$(Build.ArtifactStagingDirectory)'
+      cleanTargetFolder: true
+      overWrite: true
+    displayName: 'Copy Artifact to Staging'
+
+  - task: PublishBuildArtifacts@1
+    inputs:
+      pathtoPublish: '$(Build.ArtifactStagingDirectory)' 
+      artifactName: '{{ cookiecutter.project_name }}-artifact' 
+    displayName: 'Publish Artifact'
+
+  - task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: 'make build_backend'
