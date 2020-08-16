@@ -38,3 +38,12 @@ pip install -r requirements.txt
 python manage.py runserver
 ```
 
+## Deployment
+```bash
+# For the initial deployment
+zappa deploy dev
+
+# For subsequent deployments
+zappa update dev
+```
+
