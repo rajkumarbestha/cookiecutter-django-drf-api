@@ -27,9 +27,12 @@ pip3 install --user cookiecutter
 ```
 
 ## Usage
-Generate a new Cookiecutter template layout:
+Generate a new Cookiecutter template layout and start using your project:
 
 ```bash
 cookiecutter gh:rajkumarbestha/cookiecutter-django-drf-api
+cd <your_project_name>
+pip install -r requirements.txt
+python manage.py runserver
 ```
 
