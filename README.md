@@ -1,5 +1,6 @@
 # Cookiecutter for Django DRF-API
-[https://img.shields.io/badge/python-3.5%20%7C%203.6%20%7C%203.7-blue]
+![python 3.5 3.6 3.7](https://img.shields.io/badge/python-3.5%20%7C%203.6%20%7C%203.7-blue) ![django-3.1](https://img.shields.io/badge/django-v3.1-green) ![drf-3.11](https://img.shields.io/badge/django--rest--framework-v3.11-green)
+
 This is a cookiecutter template for Django-3.1 with DRF-3.11 setup.
 
 ## Best development practices 
