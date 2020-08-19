@@ -38,6 +38,9 @@ pip install -r requirements.txt
 python manage.py runserver
 ```
 
+## Test your Setup
+Go to http://localhost:8000/<app_name>/test_setup.html
+
 ## Deployment
 ```bash
 # For the initial deployment
